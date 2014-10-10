@@ -1,0 +1,27 @@
+https://github.com/netxillon/hadoop
+
+
+name=Centos6.5 Distro
+baseurl=ftp://192.168.1.254/pub/Centos65/
+gpgcheck=0
+enable=1
+
+
+hadoop installation video
+
+
+http://www.youtube.com/watch?v=c1KFvHx9HHI
+
+
+
+Pitbull
+
+
+http://www.youtube.com/watch?v=8Ob25XQWmzI
+
+
+http://huntingcheetah.wordpress.com/2013/02/21/configuring-rack-awareness-in-hadoop/
+
+http://stackoverflow.com/questions/7009351/hadoop-datanode-rack-awareness-setting
+
+https://github.com/netxillon
