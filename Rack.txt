@@ -1,0 +1,37 @@
+Configure the “topology.script.file.name” in core-site.xml ,
+
+<property>
+<name>topology.script.file.name</name>
+<value>/home/hadoop/hadoop/conf/topology.sh</value>
+</property>
+
+topology.sh
+
+
+HADOOP_CONF=/etc/hadoop/conf
+
+while [ $# -gt 0 ] ; do
+  nodeArg=$1
+  exec< ${HADOOP_CONF}/topology.data
+  result=””
+  while read line ; do
+    ar=( $line )
+    if [ “${ar[0]}” = “$nodeArg” ] ; then
+      result=”${ar[1]}”
+    fi
+  done
+  shift
+  if [ -z "$result" ] ; then
+    echo -n “/default/rack “
+  else
+    echo -n “$result “
+  fi
+done
+
+
+Topology data
+
+rack1: 192.168.1.1, 192.168.1.2, 192.168.1.3 
+rack2: 192.168.1.4, 192.168.1.5, 192.168.1.6 
+rack3: 192.168.1.7, 192.168.1.8, 192.168.1.9 
+
