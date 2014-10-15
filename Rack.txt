@@ -1,4 +1,4 @@
-Configure the “topology.script.file.name” in core-site.xml ,
+Configure the “topology.script.file.name” in hdfs-site.xml ,
 
 <property>
 <name>topology.script.file.name</name>
